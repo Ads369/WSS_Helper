@@ -6,17 +6,20 @@ from sqlalchemy.orm import sessionmaker
 import yaml
 
 # Get security data
-with open(r'config/config.yaml', encoding='utf8') as f:
+with open(r"config/config.yaml", encoding="utf8") as f:
     config = yaml.safe_load(f)
 
-def get_engine():
-    #Definite consatans
-    servername = config['work_db']['server']
-    dbname = config['work_db']['db_prime']
 
-    #Create engine and connect
-    engine = create_engine(f'mssql+pyodbc://{servername}/{dbname}'\
-        '?driver=ODBC+Driver+17+for+SQL+Server&Trusted_Connection=yes')
+def get_engine():
+    # Definite consatans
+    servername = config["work_db"]["server"]
+    dbname = config["work_db"]["db_prime"]
+
+    # Create engine and connect
+    engine = create_engine(
+        f"mssql+pyodbc://{servername}/{dbname}"
+        "?driver=ODBC+Driver+17+for+SQL+Server&Trusted_Connection=yes"
+    )
     return engine
 
 
@@ -24,9 +27,11 @@ def connect_sqla_core(engine):
     connection = engine.connect()
     print(connection)
 
-    #generate MetaData and download Tables from SQL server
+    # generate MetaData and download Tables from SQL server
     metadata = MetaData()
-    con_ais = Table('_list_dms__ContractsAIS_869_bk', metadata, autoload=True, autoload_with=engine)
+    con_ais = Table(
+        "_list_dms__ContractsAIS_869_bk", metadata, autoload=True, autoload_with=engine
+    )
     print(con_ais.columns.keys())
 
 
@@ -47,5 +52,5 @@ def main():
     connect_sql_orm(Base, engine)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

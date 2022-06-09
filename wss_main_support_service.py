@@ -5,19 +5,18 @@ from loguru import logger
 
 
 def check_os() -> None:
-    """Function check OS information
-    """
+    """Function check OS information"""
     if _platform == "linux" or _platform == "linux2":
-        logger.debug('# linux')
+        logger.debug("# linux")
     elif _platform == "darwin":
-        logger.debug('# MAC OS X')
+        logger.debug("# MAC OS X")
     elif _platform == "win32":
-        logger.debug('# Windows')
+        logger.debug("# Windows")
     elif _platform == "win64":
-        logger.debug('# Windows 64-bit')
+        logger.debug("# Windows 64-bit")
 
 
-def to_clipboard(in_str:str) -> None:
+def to_clipboard(in_str: str) -> None:
     """Paste to Clipboard"""
     pyperclip.copy(in_str)
 
@@ -35,8 +34,10 @@ def change_clipboard() -> str:
     return new_text
 
 
-def send_notify(title:str, text:str):
+def send_notify(title: str, text: str):
     """Display notification"""
     # on MAC
     if _platform == "darwin":
-        os.system(f"osascript -e 'display notification \"{text}\" with title \"{title}\"'")
+        os.system(
+            f'osascript -e \'display notification "{text}" with title "{title}"\''
+        )

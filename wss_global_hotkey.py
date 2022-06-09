@@ -37,10 +37,10 @@ class HotKeylistener(object):
     # On mac don't work <alt> and <cntl>
     # Work but need activate debug mode and copy special keys
 
-    hotkeys = [hotkey1, 
-            hotkey2, 
+    hotkeys = [hotkey1,
+            hotkey2,
             hotkey3,
-            hotkey4,] 
+            hotkey4,]
 
     """
 
@@ -49,15 +49,14 @@ class HotKeylistener(object):
         self.hotkeys = []
         self.listener = keyboard.Listener(
             on_press=self.signal_press_to_hotkeys,
-            on_release=self.signal_release_to_hotkeys)
+            on_release=self.signal_release_to_hotkeys,
+        )
 
     def add_hotkeys(self, hotkey):
         self.hotkeys.append(hotkey)
 
-    def generate_add_hotkeys(self, hot_key_str:str, func:Callable) -> None:
-        hotkey_new = keyboard.HotKey(
-                keyboard.HotKey.parse(hot_key_str),
-                func)
+    def generate_add_hotkeys(self, hot_key_str: str, func: Callable) -> None:
+        hotkey_new = keyboard.HotKey(keyboard.HotKey.parse(hot_key_str), func)
         self.add_hotkeys(hotkey_new)
 
     def show_hotKeys(self):
@@ -84,7 +83,7 @@ class HotKeylistener(object):
         return self.listener
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # logger.remove()
     # logger.add(sys.stdout, level="INFO")
     # logger.add(sys.stdout, level="DEBUG")
@@ -97,13 +96,13 @@ if __name__ == '__main__':
     listener = hkl.get_keyboard()
 
     def on_activate():
-        print('qwe123')
+        print("qwe123")
 
     def on_activate_2():
-        print('234zxc')
+        print("234zxc")
 
-    hkl.generate_add_hotkeys('<ctrl>+i', on_activate)
-    hkl.generate_add_hotkeys('<ctrl>+\x0c', on_activate_2)
+    hkl.generate_add_hotkeys("<ctrl>+i", on_activate)
+    hkl.generate_add_hotkeys("<ctrl>+\x0c", on_activate_2)
 
     listener = hkl.get_keyboard()
     with listener as l:

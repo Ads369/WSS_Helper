@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Settings>
+   <Lists>
+      
+      <List WebUrl="/dms/outgoing" Name="Outgoing" ProcessName="reg_outgoing_1c" Code="01" Solution="Отправить на согласование(исходящие)">
+         <Fields>
+            <Field Name="Подписант" Identity="Адрес электронной почты" IsRequired="true" />
+            <Field Name="Содержание" IsRequired="true" />
+            <Field Name="Контрагент" Identity="ID" IsRequired="false" />
+            <Field Name="Контрагент (текст)" IsRequired="false" />
+            <Field Name="Приоритет" Identity="Название" IsRequired="false" />
+            <Field Name="Примечания" IsRequired="false" />
+            <Field Name="Контрагент: Адресат" IsRequired="false" />
+            <Field Name="Контрагент: Номер входящего" IsRequired="false" />
+            <Field Name="Контрагент: Дата входящего" IsRequired="false" />
+            <Field Name="Документ-основание" IsRequired="false" />
+            <Field Name="Компания" Identity="ID" IsRequired="true" />
+            <Field Name="Компания подписанта" Identity="ID" IsRequired="false" />
+            <Field Name="перевести в Архив" IsRequired="false" />
+            <Field Name="Способ отправки" Identity="ID" IsRequired="false" />
+            <Field Name="Веб-сервис" Identity="ID" IsRequired="false" />
+         </Fields>
+      </List>
+
+      <List WebUrl="/dms/erequests" Name="ERequests" ProcessName="ERequests" Code="02" Solution="Отправить на согласование(ЭСЗ_1С)">
+         <Fields>
+            <Field Name="Подписант" Identity="Адрес электронной почты" IsRequired="true" />
+            <Field Name="Адресат" Identity="Адрес электронной почты" IsRequired="true" />
+            <Field Name="Содержание" IsRequired="true" />
+            <Field Name="Вид служебной записки" Identity="Название" IsRequired="true" />
+            <Field Name="Документ-основание" IsRequired="false" />
+            <Field Name="Веб-сервис ИС" Identity="ID" IsRequired="false" />
+            <Field Name="Другие документы" IsRequired="false" />
+         </Fields>
+      </List>
+
+      <List WebUrl="/dms/outgoing_pd" Name="Outgoing_pd" ProcessName="reg_outgoing_1c_pd" Code="03" Solution="Отправить на согласование (ПД)">
+         <Fields>
+            <Field Name="Подписант" Identity="Адрес электронной почты" IsRequired="true" />
+            <Field Name="Содержание" IsRequired="true" />
+            <Field Name="Вид процессуального документа" Identity="ID" IsRequired="true" />
+            <Field Name="Контрагент" Identity="ID" IsRequired="false" />
+            <Field Name="Контрагент (текст)" IsRequired="false" />
+            <Field Name="Приоритет" Identity="Название" IsRequired="false" />
+            <Field Name="Примечания" IsRequired="false" />
+            <Field Name="Контрагент: Адресат" IsRequired="false" />
+            <Field Name="Контрагент: Номер входящего" IsRequired="false" />
+            <Field Name="Контрагент: Дата входящего" IsRequired="false" />
+            <Field Name="Документ-основание" IsRequired="false" />
+            <Field Name="Компания" Identity="ID" IsRequired="false" />
+            <Field Name="Вид процессуального документа" IsRequired="false" />
+            <Field Name="Тип отправления исходящего процессуального документа (ИПД)" Identity="ID" IsRequired="false" />
+            <Field Name="Штриховой Почтовый Идентификатор" IsRequired="false" />
+            <Field Name="Веб-сервис" Identity="ID" IsRequired="true" />
+            <Field Name="Номер дела" IsRequired="false" />
+            <Field Name="Сумма долга" IsRequired="false" />
+         </Fields>
+      </List>
+
+      <List WebUrl="/dms/doc1c" Name="doc1c" ProcessName="internalDoc1c" Code="04" Solution="Зарегистрировать 1С">
+         <Fields>
+            <Field Name="Номер в 1С" IsRequired="true" />
+            <Field Name="Содержание" IsRequired="false" />
+            <Field Name="Веб-сервис ИС" Identity="ID" IsRequired="false" />
+         </Fields>
+      </List>
+
+      <List WebUrl="/dms/incomming_cok " Name="incomming_cok " ProcessName="incomming_cok_ASRN" Code="05" Solution="Зарегистрировать обращение (ЦОК)1С">
+         <Fields>
+            <Field Name="Адресат" Identity="Адрес электронной почты" IsRequired="true" />
+            <Field Name="Содержание" IsRequired="true" />
+            <Field Name="Причина обращения" Identity="ID" IsRequired="true" />
+            <Field Name="Адрес" IsRequired="false" />
+            <Field Name="ФИО" IsRequired="false" />
+            <Field Name="Имя" IsRequired="false" />
+            <Field Name="Отчество" IsRequired="false" />
+            <Field Name="Номер лицевого счета" IsRequired="false" />
+            <Field Name="Номер_паспорта" IsRequired="false" />
+            <Field Name="Серия паспорта" IsRequired="false" />
+            <Field Name="Когда выдан" IsRequired="false" />
+            <Field Name="Кем выдан" IsRequired="false" />
+            <Field Name="Дата рождения" IsRequired="false" />
+            <Field Name="Место рождения" IsRequired="false" />
+            <Field Name="Адрес регистрации" IsRequired="false" />
+            <Field Name="Адрес фактического проживания" IsRequired="false" />
+            <Field Name="Совпадает с адресом помещения" IsRequired="false" />
+            <Field Name="Совпадает с адресом регистрации" IsRequired="false" />
+            <Field Name="перевести в Архив" IsRequired="false" />
+            <Field Name="Телефон" IsRequired="false" />
+            <Field Name="e-mail" IsRequired="false" />
+            <Field Name="Заявка на платные услуги" IsRequired="false" />
+            <Field Name="Вид услуги" Identity="Название" IsRequired="false" />
+            <Field Name="Веб-сервис ИС" Identity="ID" IsRequired="false" />
+            <Field Name="Подвид обращения" Identity="ID" IsRequired="false" />
+            <Field Name="Дата регистрации" IsRequired="false" />
+         </Fields>
+      </List>
+
+      <List WebUrl="/dms/outgoing" Name="Outgoing" ProcessName="outgoing" Code="06" Solution="Созать исходящий">
+         <Fields>
+            <Field Name="Подписант" Identity="Адрес электронной почты" IsRequired="true" />
+            <Field Name="Содержание" IsRequired="true" />
+            <Field Name="Контрагент" Identity="ID" IsRequired="false" />
+            <Field Name="Контрагент (текст)" IsRequired="false" />
+            <Field Name="Приоритет" Identity="Название" IsRequired="false" />
+            <Field Name="Примечания" IsRequired="false" />
+            <Field Name="Контрагент: Адресат" IsRequired="false" />
+            <Field Name="Контрагент: Номер входящего" IsRequired="false" />
+            <Field Name="Контрагент: Дата входящего" IsRequired="false" />
+            <Field Name="Документ-основание" IsRequired="false" />
+            <Field Name="Компания" Identity="ID" IsRequired="true" />
+            <Field Name="Компания подписанта" Identity="ID" IsRequired="false" />
+            <Field Name="перевести в Архив" IsRequired="false" />
+            <Field Name="Способ отправки" Identity="ID" IsRequired="false" />
+            <Field Name="Веб-сервис" Identity="ID" IsRequired="false" />
+            <Field Name="Является ответом" Identity="ID" IsRequired="false" />
+            <Field Name="Вид коммунальной услуги" Identity="ID" IsRequired="false" />
+         </Fields>
+      </List>
+
+      <List WebUrl="/dms/incomming_ovzid" Name="incomming_ovzid" ProcessName="incomming_ovzid_webserv" Code="08" Solution="Зарегистрировать обращение (ОВЗИД)">
+         <Fields>
+            <Field Name="Адресат" Identity="Адрес электронной почты" IsRequired="true" />
+            <Field Name="Номер исполнительного документа" IsRequired="true" />
+            <Field Name="Компания" Identity="ID" IsRequired="true" />
+            <Field Name="Вид ИЛ" Identity="ID" IsRequired="true" />
+            <Field Name="Тип должника" Identity="ID" IsRequired="true" />
+            <Field Name="ФИО" IsRequired="false" />
+            <Field Name="Контрагент" Identity="ID" IsRequired="false" />
+            <Field Name="Номер исполнительного документа" IsRequired="true" />
+            <Field Name="Номер дела" IsRequired="false" />
+            <Field Name="Дата решения по делу" IsRequired="false" />
+            <Field Name="Адрес" IsRequired="false" />
+            <Field Name="Содержание" IsRequired="false" />
+            <Field Name="Веб-сервис ИС" Identity="ID" IsRequired="false" />
+         </Fields>
+      </List>
+
+      <List WebUrl="/dms/instructions" Name="Instructions" ProcessName="commission" Code="09" Solution="Зарегистрировать поручение">
+         <Fields>
+            <Field Name="Автор поручения" Identity="Адрес электронной почты" IsRequired="true" />
+            <Field Name="Содержание" IsRequired="true" />
+            <Field Name="Исполнитель" Identity="Адрес электронной почты" IsRequired="true" />
+            <Field Name="Соисполнители" Identity="Адрес электронной почты" IsRequired="false" />
+            <Field Name="Контролер" Identity="Адрес электронной почты" IsRequired="true" />
+            <Field Name="Исполнить до" IsRequired="true" />
+            <Field Name="Создано в Веб-Сервисе" IsRequired="false" />
+            <Field Name="Веб-сервис ИС" Identity="ID" IsRequired="false" />
+            <Field Name="Вид поручения" Identity="ID" IsRequired="false" />
+         </Fields>
+      </List>
+
+      <List WebUrl="/dms/erequests" Name="ERequests" ProcessName="ERequests" Code="10" Solution="Создать ЭСЗ">
+         <Fields>
+            <Field Name="Подписант" Identity="Адрес электронной почты" IsRequired="false" />
+            <Field Name="Адресат" Identity="Адрес электронной почты" IsRequired="false" />
+            <Field Name="Содержание" IsRequired="true" />
+            <Field Name="Вид служебной записки" Identity="Название" IsRequired="true" />
+            <Field Name="Документ-основание" IsRequired="false" />
+            <Field Name="Веб-сервис ИС" Identity="ID" IsRequired="false" />
+         </Fields>
+      </List>
+
+      <List WebUrl="/dms/access" Name="Access" ProcessName="internalAccess" Code="11" Solution="Отправить на согласование (ИТ)">
+         <Fields>
+            <Field Name="Информационная система" Identity="ID" IsRequired="true" />
+            <Field Name="Вид заявки" Identity="ID" IsRequired="true" />
+            <Field Name="Содержание" IsRequired="true" />
+            <Field Name="Приоритет" Identity="ID" IsRequired="true" />
+            <Field Name="Веб-сервис ИС" Identity="ID" IsRequired="true" />
+            <Field Name="Подписант" Identity="Адрес электронной почты" IsRequired="true" />
+         </Fields>
+      </List>
+
+      <List WebUrl="/dms/docquality" Name="Docquality" ProcessName="internalDocquality" Code="12" Solution="Создать проверку качества документов">
+         <Fields>
+            <Field Name="Виды услуг" Identity="ID" IsRequired="true" />
+            <Field Name="Подписант" Identity="Адрес электронной почты" IsRequired="true" />
+            <Field Name="Представительство сотрудника" Identity="ID" IsRequired="true" />
+            <Field Name="Подключение до ПУ" Identity="ID" IsRequired="false" />
+            <Field Name="Номер документа" IsRequired="true" />
+            <Field Name="Номер договора" IsRequired="true" />
+            <Field Name="Дата документа" IsRequired="true" />
+            <Field Name="Потребитель" IsRequired="true" />
+            <Field Name="Номер прибора учета" IsRequired="true" />
+            <Field Name="Вид неучтенного потребления" Identity="ID" IsRequired="true" />
+            <Field Name="Веб-сервис ИС" Identity="ID" IsRequired="true" />
+         </Fields>
+      </List>
+
+      <List WebUrl="/dms/erequests" Name="ERequests" ProcessName="ERequests2" Code="13" Solution="Создать ЭСЗ на дистанционную работу">
+         <Fields>
+            <Field Name="Подписант" Identity="Адрес электронной почты" IsRequired="false" />
+            <Field Name="Адресат" Identity="Логин" IsRequired="false" />
+            <Field Name="Ответственный" Identity="Адрес электронной почты" IsRequired="false" />
+            <Field Name="Содержание" IsRequired="true" />
+            <Field Name="Вид служебной записки" Identity="Название" IsRequired="true" />
+            <Field Name="Веб-сервис ИС" Identity="ID" IsRequired="false" />
+         </Fields>
+      </List>
+
+      <List WebUrl="/dms/authorities" Name="Authorities" ProcessName="typicalAuthority" Code="14" Solution="Создать доверенность (Банк полномочий)">
+         <Fields>
+            <Field Name="Подписант" Identity="Адрес электронной почты" IsRequired="false" />
+            <Field Name="ФИО поверенного" Identity="ID" IsRequired="false" />
+            <Field Name="Основные полномочия поверенного" IsRequired="true" />
+            <Field Name="Компания повернного" Identity="ID" IsRequired="true" />
+            <Field Name="Адрес централизованной рассылки" Identity="ID" IsRequired="false" />
+            <Field Name="Конечный адрес получателя" IsRequired="false" />
+            <Field Name="Конечный адрес получателя" IsRequired="false" />
+            <Field Name="Дата выдачи" IsRequired="false" />
+            <Field Name="Дата окончания" IsRequired="false" />
+            <Field Name="Банк полномочий" IsRequired="true" />
+            <Field Name="Веб-сервис ИС" Identity="ID" IsRequired="false" />
+            <Field Name="Вид доверенности" Identity="ID" IsRequired="false" />
+            <Field Name="Компания поверенного (новое)" Identity="ID" IsRequired="false" />
+            <Field Name="Филиал поверенного" Identity="ID" IsRequired="false" />
+			<Field Name="Представительство поверенного" Identity="ID" IsRequired="false" />
+            <Field Name="Департамент поверенного" Identity="ID" IsRequired="false" />
+            <Field Name="Этап" Identity="Название" IsRequired="false" />
+
+         </Fields>
+      </List>
+
+      <List WebUrl="/dms/authorities" Name="Authorities" ProcessName="notTypicalAuthority" Code="15" Solution="Создать доверенность (Банк полномочий)">
+         <Fields>
+            <Field Name="Подписант" Identity="Адрес электронной почты" IsRequired="false" />
+            <Field Name="ФИО поверенного" Identity="ID" IsRequired="false" />
+            <Field Name="Основные полномочия поверенного" IsRequired="true" />
+            <Field Name="Компания повернного" Identity="ID" IsRequired="true" />
+            <Field Name="Адрес централизованной рассылки" Identity="ID" IsRequired="false" />
+            <Field Name="Конечный адрес получателя" IsRequired="false" />
+            <Field Name="Дата выдачи" IsRequired="false" />
+            <Field Name="Дата окончания" IsRequired="false" />
+            <Field Name="Банк полномочий" IsRequired="true" />
+            <Field Name="Веб-сервис ИС" Identity="ID" IsRequired="false" />
+            <Field Name="Вид доверенности" Identity="ID" IsRequired="false" />
+            <Field Name="Компания поверенного (новое)" Identity="ID" IsRequired="false" />
+            <Field Name="Филиал поверенного" Identity="ID" IsRequired="false" />
+			<Field Name="Представительство поверенного" Identity="ID" IsRequired="false" />
+            <Field Name="Департамент поверенного" Identity="ID" IsRequired="false" />
+         </Fields>
+      </List>
+
+      <List WebUrl="/dms/proverka_ok" Name="Proverka_ok" ProcessName="internalProverka_ok" Code="16" Solution="Создать документ на проверку кандидата">
+         <Fields>
+            <Field Name="Служебная записка в Отдел Кадров" Identity="ID" IsRequired="true" />
+            <Field Name="Проверяющий" Identity="Адрес электронной почты" IsRequired="true" />
+            <Field Name="Уровень должности" Identity="ID" IsRequired="true" />
+            <Field Name="ФИО кандидата" IsRequired="true" />
+            <Field Name="Дата рождения" IsRequired="false" />
+            <Field Name="Номер телефона" IsRequired="true" />
+            <Field Name="Должность (список)" Identity="ID" IsRequired="true" />
+            <Field Name="Адрес офиса (дистанционно)" Identity="ID" IsRequired="true" />
+            <Field Name="Филиал кандидата" Identity="ID" IsRequired="true" />
+            <Field Name="Департамент кандидата" Identity="ID" IsRequired="true" />
+            <Field Name="Служба кандидата" Identity="ID" IsRequired="true" />
+            <Field Name="Компания кандидата" Identity="ID" IsRequired="true" />
+            <Field Name="Представительство кандидата" Identity="ID" IsRequired="true" />
+            <Field Name="Отдел кандидата" Identity="ID" IsRequired="true" />
+            <Field Name="Группа кандидата" Identity="ID" IsRequired="true" />
+            <Field Name="Подразделение кандидата" Identity="ID" IsRequired="true" />
+            <Field Name="Веб-сервис ИС" Identity="ID" IsRequired="false" />
+         </Fields>
+      </List>
+
+      <List WebUrl="/dms/incoming " Name="Incoming" ProcessName="incoming_LK" Code="17" Solution="Зарегистрировать">
+         <Fields>
+            <Field Name="Адресат" Identity="Адрес электронной почты" IsRequired="true" />
+            <Field Name="Содержание" IsRequired="true" />
+            <Field Name="Является потребителем" IsRequired="false" />
+            <Field Name="Категория письма" Identity="ID" IsRequired="true" />
+            <Field Name="Вид коммунальной услуги" Identity="ID" IsRequired="false" />
+            <Field Name="Номер обращения АИС Восток" IsRequired="false" />
+            <Field Name="Контрагент" Identity="ID" IsRequired="true" />
+            <Field Name="Контрагент: Подписант" IsRequired="false" />
+            <Field Name="Контрагент: Номер" IsRequired="true" />
+            <Field Name="Контрагент: Дата" IsRequired="true" />
+            <Field Name="Телефон" IsRequired="false" />
+            <Field Name="Электронная почта" IsRequired="false" />
+            <Field Name="Компания" Identity="ID" IsRequired="false" />
+            <Field Name="Филиал" Identity="ID" IsRequired="false" />
+            <Field Name="Представительство" Identity="ID" IsRequired="false" />
+            <Field Name="Номер договора в АИС" Identity="Договор АИС" IsRequired="false" />
+            <Field Name="Веб-сервис ИС" Identity="ID" IsRequired="true" />
+            <Field Name="Способ ответа" Identity="ID" IsRequired="true" />
+            <Field Name="Исполнить до" IsRequired="false" />
+            <Field Name="Исполнитель" Identity="Адрес электронной почты" IsRequired="true" />
+         </Fields>
+      </List>
+
+      <List WebUrl="/dms/contracts" Name="Contracts" ProcessName="Contracts" Code="18" Solution="Создать документ через веб-сервис">
+         <Fields>
+            <Field Name="Вид договора" Identity="ID" IsRequired="true" />
+            <Field Name="Тип договора" Identity="ID" IsRequired="true" />
+            <Field Name="Содержание" IsRequired="true" />
+            <Field Name="Контрагент" Identity="ID" IsRequired="true" />
+            <Field Name="Сумма" IsRequired="true" />
+            <Field Name="Валюта" Identity="ID" IsRequired="true" />
+            <Field Name="Номер" IsRequired="true" />
+            <Field Name="Дата" IsRequired="true" />
+            <Field Name="Ссылки на доп соглашения" Identity="ID" IsRequired="true" />
+            <Field Name="Исполнитель" Identity="Адрес электронной почты" IsRequired="true" />
+            <Field Name="Ответственный за договор" Identity="Адрес электронной почты" IsRequired="true" />
+            <Field Name="Представительство" Identity="ID" IsRequired="false" />
+            <Field Name="Создано в Веб-Сервисе" IsRequired="false" />
+            <Field Name="Веб-сервис ИС" Identity="ID" IsRequired="false" />
+         </Fields>
+      </List>
+
+      <List WebUrl="/dms/contracts" Name="Agreements" ProcessName="Collateral Agreements" Code="19" Solution="Создать документ через веб-сервис">
+         <Fields>
+            <Field Name="Вид договора" Identity="ID" IsRequired="true" />
+            <Field Name="Тип договора" Identity="ID" IsRequired="true" />
+            <Field Name="Тип доп. соглашения" Identity="ID" IsRequired="false" />
+            <Field Name="Содержание" IsRequired="true" />
+            <Field Name="Контрагент" Identity="ID" IsRequired="true" />
+            <Field Name="Сумма" IsRequired="true" />
+            <Field Name="Валюта" Identity="ID" IsRequired="true" />
+            <Field Name="Номер" IsRequired="true" />
+            <Field Name="Дата" IsRequired="true" />
+            <Field Name="Ссылка на договор" Identity="ID" IsRequired="true" />
+            <Field Name="Исполнитель" Identity="Адрес электронной почты" IsRequired="true" />
+            <Field Name="Ответственный за дополнительное соглашение" Identity="Адрес электронной почты" IsRequired="true" />
+            <Field Name="Представительство" Identity="ID" IsRequired="false" />
+            <Field Name="Создано в Веб-Сервисе" IsRequired="false" />
+            <Field Name="Веб-сервис ИС" Identity="ID" IsRequired="false" />
+         </Fields>
+      </List>
+
+      <List WebUrl="/dms/outgoing" Name="Outgoing" ProcessName="outgoing" Code="20" Solution="Отправить на согласование(исходящие)">
+         <Fields>
+            <Field Name="Содержание" IsRequired="true" />
+            <Field Name="Контрагент" Identity="ID" IsRequired="true" />
+            <Field Name="Подписант" Identity="Адрес электронной почты" IsRequired="true" />
+            <Field Name="Номер договора в АИС" Identity="ID" IsRequired="true" />
+            <Field Name="Вид документа в АИС" Identity="ID" IsRequired="true" />
+            <Field Name="Исполнитель" Identity="Адрес электронной почты" IsRequired="true" />
+            <Field Name="Компания" Identity="ID" IsRequired="false" />
+            <Field Name="Руководитель" Identity="Адрес электронной почты" IsRequired="false" />
+            <Field Name="Веб-сервис" Identity="ID" IsRequired="true" />
+            <Field Name="Документ-основание" IsRequired="false" />
+            <Field Name="Ссылка на входящий документ" Identity="Регистрационный номер" />
+         </Fields>
+      </List>
+
+      <List WebUrl="/dms/debt_cancellation" Name="DebtCancellation" ProcessName="DebtCancellation" Code="21" Solution="Отправить на согласование (СДЗ)">
+         <Fields>
+            <Field Name="Содержание" IsRequired="true" />
+            <Field Name="Исполнитель заявки" Identity="Адрес электронной почты" IsRequired="true" />
+            <Field Name="Задолженность принципала" Identity="ID" IsRequired="false" />
+            <Field Name="Документ-основание" IsRequired="false" />
+            <Field Name="Веб-сервис ИС" Identity="ID" IsRequired="true"/>
+            <Field Name="Вид должника" Identity="ID" IsRequired="true" />
+            <Field Name="Основание списания"  Identity="ID" IsRequired="false"/> 
+         </Fields>
+      </List>
+
+      <List WebUrl="/dms/universaldocument" Name="AuthorityProfile" ProcessName="AuthorityProfile" Code="27" Solution="Отправить на согласование (ПрофП)">
+         <Fields>
+            <Field Name="Номер профиля" IsRequired="true" />
+            <Field Name="Компания (профиль)" Identity="ID" IsRequired="true" />
+		    <Field Name="Филиал (профиль)" Identity="ID" IsRequired="false" />
+			<Field Name="Представительство (профиль)" Identity="ID" IsRequired="false" />
+			<Field Name="Подразделение (профиль)" Identity="ID" IsRequired="false" />
+			<Field Name="Департамент (профиль)" Identity="ID" IsRequired="false" />
+			<Field Name="Служба (профиль)" Identity="ID" IsRequired="false" />
+			<Field Name="Отдел (профиль)" Identity="ID" IsRequired="false" />
+			<Field Name="Группа (профиль)" Identity="ID" IsRequired="false" />
+			<Field Name="Город (профиль)" Identity="ID" IsRequired="false" />
+            <Field Name="Должность" IsRequired="false" />
+			<Field Name="Полномочия" IsRequired="true" />
+			<Field Name="Список поверенных отобранных по заданным параметрам" Identity="ID" IsRequired="true" />
+            <Field Name="Веб-сервис ИС" Identity="ID" IsRequired="true"/>
+            <Field Name="Печать доверенностей на бумаге" IsRequired="true" /> 
+            <Field Name="Основание профиля" IsRequired="true"/>
+            <Field Name="Профиль в Банке полномочий" IsRequired="true" />
+            <Field Name="Документ-основание" IsRequired="false" /> 
+         </Fields>
+      </List>
+	  
+
+  <List WebUrl="/dms/incoming " Name="Incoming" ProcessName="incoming_LK" Code="22" Solution="Зарегистрировать">
+         <Fields>
+            <Field Name="Документ-основание" IsRequired="false" />
+            <Field Name="Адресат" Identity="Адрес электронной почты" IsRequired="true" />
+            <Field Name="Содержание" IsRequired="false" />
+            <Field Name="Категория письма" Identity="ID" IsRequired="true" />
+            <Field Name="Веб-сервис ИС" Identity="ID" IsRequired="true" />
+            <Field Name="Номер заявки СУЭНКО" IsRequired="true" />
+            <Field Name="Дата заявки СУЭНКО" IsRequired="true" />
+            <Field Name="Срок ответа" IsRequired="false" />
+           <Field Name="Договор подписан" Identity="ID" IsRequired="false" />
+           <Field Name="Оплата проведена" Identity="ID" IsRequired="false" />
+           </Fields>
+      </List>
+
+   </Lists>
+
+
+
+   <SearchableLists>
+
+      <List WebUrl="/dms/contracts" Name="Agreements">
+         <Fields>
+            <Field Name="ID" />
+            <Field Name="Регистрационный номер" />
+            <Field Name="Номер" />
+         </Fields>
+         <ReturnedFields>
+            <Field Name="ID" />
+            <Field Name="Регистрационный номер" InnerFields="Регистрационный номер" />
+            <Field Name="Вид договора" InnerFields="Название" />
+            <Field Name="Скан. копии" InnerFields="Скан. копии" />
+            <Field Name="Тип договора" InnerFields="Название" />
+            <Field Name="Дата регистрации" InnerFields="Дата регистрации" />
+            <Field Name="Сумма" InnerFields="Сумма" />
+            <Field Name="Валюта" InnerFields="Название" />
+            <Field Name="Номер" InnerFields="Номер" />
+            <Field Name="Дата" InnerFields="Дата" />
+            <Field Name="Ответственный за дополнительное соглашение" InnerFields="Адрес электронной почты" />
+            <Field Name="Исполнитель" InnerFields="Адрес электронной почты" />
+            <Field Name="Контрагент" InnerFields="Название;ИНН;КПП" />
+         </ReturnedFields>
+      </List>
+
+      <List WebUrl="/dms/contracts" Name="Contracts">
+         <Fields>
+            <Field Name="ID" />
+            <Field Name="Регистрационный номер" />
+            <Field Name="Номер" />
+            <Field Name="Дата регистрации" />
+         </Fields>
+         <ReturnedFields>
+            <Field Name="ID" />
+            <Field Name="Регистрационный номер" InnerFields="Регистрационный номер" />
+            <Field Name="Вид договора" InnerFields="Название" />
+            <Field Name="Скан. копии" InnerFields="Скан. копии" />
+            <Field Name="Тип договора" InnerFields="Название" />
+            <Field Name="Дата регистрации" InnerFields="Дата регистрации" />
+            <Field Name="Сумма" InnerFields="Сумма" />
+            <Field Name="Валюта" InnerFields="Название" />
+            <Field Name="Номер" InnerFields="Номер" />
+            <Field Name="Дата" InnerFields="Дата" />
+            <Field Name="Ответственный за договор" InnerFields="Адрес электронной почты" />
+            <Field Name="Исполнитель" InnerFields="Адрес электронной почты" />
+            <Field Name="Контрагент" InnerFields="Название;ИНН;КПП" />
+         </ReturnedFields>
+      </List>
+
+      <List WebUrl="/dms/incomming_ovzid" Name="incomming_ovzid">
+         <Fields>
+            <Field Name="Номер исполнительного документа" />
+            <Field Name="Номер дела" />
+         </Fields>
+         <ReturnedFields>
+            <Field Name="Вид ИЛ" InnerFields="Название" />
+            <Field Name="Скан. копии" InnerFields="Скан. копии" />
+            <Field Name="Номер исполнительного документа" InnerFields="Номер исполнительного документа" />
+            <Field Name="Регистрационный номер" InnerFields="Регистрационный номер" />
+            <Field Name="Дата регистрации" InnerFields="Дата регистрации" />
+            <Field Name="Контрагент" InnerFields="Название;ИНН;КПП" />
+         </ReturnedFields>
+      </List>
+
+      <List WebUrl="/dms/incomming_ovzid" Name="incomming_id">
+         <Fields>
+            <Field Name="Номер исполнительного документа" />
+            <Field Name="Номер дела" />
+         </Fields>
+         <ReturnedFields>
+            <Field Name="Вид ИЛ" InnerFields="Название" />
+            <Field Name="Скан. копии" InnerFields="Скан. копии" />
+            <Field Name="Номер исполнительного документа" InnerFields="Номер исполнительного документа" />
+            <Field Name="Регистрационный номер" InnerFields="Регистрационный номер" />
+            <Field Name="Дата регистрации" InnerFields="Дата регистрации" />
+            <Field Name="Контрагент" InnerFields="Название;ИНН;КПП" />
+            <Field Name="ИНН должника" InnerFields="ИНН должника" />
+         </ReturnedFields>
+      </List>
+
+      <List WebUrl="/dms" Name="Contragents">
+         <Fields>
+            <Field Name="ID" />
+            <Field Name="ИНН" />
+            <Field Name="КПП" />
+            <Field Name="Верифицирован" />
+            <Field Name="Класс контрагента" Identity="ID" />
+            <Field Name="Название" />
+            <Field Name="Краткое название" />
+         </Fields>
+         <ReturnedFields>
+            <Field Name="Название" />
+            <Field Name="Краткое название" />
+            <Field Name="ИНН" />
+            <Field Name="КПП" />
+            <Field Name="ID" />
+            <Field Name="Не актуален" />
+            <Field Name="Верифицирован" />
+         </ReturnedFields>
+      </List>
+
+      <List WebUrl="/dms" Name="ContragentsTypes">
+         <Fields>
+            &gt;
+            <Field Name="ID" />
+            <Field Name="Название" />
+            <Field Name="Неактуален" Identity="Название" />
+         </Fields>
+         <ReturnedFields>
+            <Field Name="ID" />
+            <Field Name="Название" />
+            <Field Name="Неактуален" InnerFields="Название" />
+         </ReturnedFields>
+      </List>
+
+      <List WebUrl="/dms/incoming" Name="incoming">
+         <Fields>
+            <Field Name="Регистрационный номер" />
+            <Field Name="Номер договора АИС" />
+         </Fields>
+         <ReturnedFields>
+            <Field Name="Регистрационный номер" InnerFields="Регистрационный номер" />
+            <Field Name="ID" InnerFields="ID" />
+            <Field Name="Дата регистрации" InnerFields="Дата регистрации" />
+            <Field Name="Вид документа в АИС" InnerFields="Наименование" />
+            <Field Name="Этап" InnerFields="Отображаемое название" />
+            <Field Name="Статус" InnerFields="Отображаемое название" />
+            <Field Name="Отчет об исполнении" InnerFields="Отчет об исполнении" />
+            <Field Name="Файлы отчета" InnerFields="Файлы отчета" />
+            <Field Name="Скан. копии" InnerFields="Скан. копии" />
+            <Field Name="Ссылка на исходящий документ" InnerFields="Регистрационный номер" />
+            <Field Name="Способ ответа" InnerFields="Название" />
+            <Field Name="Фактический способ ответа" InnerFields="Название" />
+            <Field Name="Адресат" InnerFields="Адрес электронной почты" />
+            <Field Name="Срок ответа" />
+            <Field Name="Исполнить до" />
+         </ReturnedFields>
+      </List>
+
+      <List WebUrl="/dms/outgoing" Name="outgoing">
+         <Fields>
+            <Field Name="Регистрационный номер" />
+            <Field Name="ID" InnerFields="ID" />
+            <Field Name="Содержание" />
+         </Fields>
+         <ReturnedFields>
+            <Field Name="Регистрационный номер" InnerFields="Регистрационный номер" />
+            <Field Name="Дата регистрации" InnerFields="Дата регистрации" />
+            <Field Name="Этап" InnerFields="Отображаемое название" />
+            <Field Name="Статус" InnerFields="Отображаемое название" />
+            <Field Name="Вид документа в АИС" InnerFields="Наименование" />
+            <Field Name="Номер договора в АИС" InnerFields="Договор АИС" />
+            <Field Name="Скан. копии" InnerFields="Скан. копии" />
+            <Field Name="Срок ответа" InnerFields="Срок ответа" />
+         </ReturnedFields>
+      </List>
+
+      <List WebUrl="/dms/incomming_cok" Name="incomming_cok">
+         <Fields>
+            <Field Name="Дата регистрации" />
+            <Field Name="Регистрационный номер" />
+            <Field Name="Номер лицевого счета" />
+         </Fields>
+         <ReturnedFields>
+            <Field Name="Регистрационный номер" InnerFields="Регистрационный номер" />
+            <Field Name="ФИО" InnerFields="ФИО" />
+            <Field Name="Имя" InnerFields="Имя" />
+            <Field Name="Отчество" InnerFields="Отчество" />
+            <Field Name="Дата регистрации" InnerFields="Дата регистрации" />
+            <Field Name="Этап" InnerFields="Название" />
+            <Field Name="Статус" InnerFields="Название" />
+            <Field Name="Регистратор" InnerFields="Адрес электронной почты" />
+            <Field Name="Отчет об исполнении" InnerFields="Наименование" />
+            <Field Name="Скан. копии" InnerFields="Скан. копии" />
+         </ReturnedFields>
+      </List>
+
+      <List WebUrl="/dms/instructions" Name="Instructions">
+         <Fields>
+            <Field Name="Регистрационный номер" />
+            <Field Name="ID" InnerFields="ID" />
+            <Field Name="Документ-основание (текст)" />
+         </Fields>
+         <ReturnedFields>
+            <Field Name="Регистрационный номер" />
+            <Field Name="Статус" InnerFields="Название" />
+            <Field Name="Этап" InnerFields="Название" />
+            <Field Name="Исполнить до" />
+            <Field Name="Файлы отчета" InnerFields="Файлы отчета" />
+            <Field Name="Отчет исполнителя" />
+            <Field Name="Инициатор" InnerFields="Имя пользователя" />
+            <Field Name="Профиль доверенности актуален" InnerFields="Название" />
+         </ReturnedFields>
+      </List>
+
+      <List WebUrl="/dms/outgoing_pd" Name="outgoing_pd">
+         <Fields>
+            <Field Name="Регистрационный номер" />
+         </Fields>
+         <ReturnedFields>
+            <Field Name="Штриховой Почтовый Идентификатор" />
+         </ReturnedFields>
+      </List>
+
+      <List WebUrl="/dms/orders" Name="Orders">
+         <Fields>
+            <Field Name="Регистрационный номер" />
+            <Field Name="ID" />
+         </Fields>
+         <ReturnedFields>
+            <Field Name="Регистрационный номер" />
+            <Field Name="Документ-основание" InnerFields="Регистрационный номер" />
+         </ReturnedFields>
+      </List>
+
+      <List WebUrl="/" Name="Users">
+         <Fields>
+            <Field Name="Имя пользователя" />
+            <Field Name="Логин" />
+            <Field Name="Адрес электронной почты" />
+         </Fields>
+         <ReturnedFields>
+            <Field Name="ID" />
+            <Field Name="Логин" InnerFields="Логин" />
+            <Field Name="Имя пользователя" InnerFields="Имя пользователя" />
+            <Field Name="Адрес электронной почты" InnerFields="Адрес электронной почты" />
+            <Field Name="Заместитель в ПК Табель" InnerFields="Логин" />
+         </ReturnedFields>
+      </List>
+
+      <List WebUrl="/dms" Name="ContractsAIS">
+         <Fields>
+            <Field Name="ContractGUID" />
+            <Field Name="Договор АИС" />
+         </Fields>
+         <ReturnedFields>
+            <Field Name="ID" />
+         </ReturnedFields>
+      </List>
+
+      <List WebUrl="/dms/access" Name="Access">
+         <Fields>
+            <Field Name="ID" />
+            <Field Name="Регистрационный номер" />
+            <Field Name="Этап" Identity="ID" />
+            <Field Name="Статус" Identity="ID" />
+            <Field Name="Ссылка на YouTrack" />
+            <Field Name="Дата регистрации" />
+         </Fields>
+         <ReturnedFields>
+            <Field Name="ID" InnerFields="ID" />
+            <Field Name="TimeModified" InnerFields="TimeModified" />
+            <Field Name="Регистрационный номер" InnerFields="Регистрационный номер" />
+            <Field Name="Дата регистрации" InnerFields="Дата регистрации" />
+            <Field Name="Исполнить до" InnerFields="Исполнить до" />
+            <Field Name="Этап" InnerFields="Название" />
+            <Field Name="Статус" InnerFields="Название" />
+            <Field Name="Решения" />
+            <Field Name="Файлы-комментарии" InnerFields="Файлы-комментарии" />
+            <Field Name="Файлы документа" InnerFields="Файлы документа" />
+            <Field Name="Ссылка на YouTrack" InnerFields="Ссылка на YouTrack" />
+            <Field Name="Статус в Youtrack" InnerFields="Статус в Youtrack" />
+         </ReturnedFields>
+      </List>
+
+<List WebUrl="/dms/erequests" Name="ERequests">
+         <Fields>
+            <Field Name="ID" />
+            <Field Name="Регистрационный номер" />
+            <Field Name="Статус" Identity="ID" />
+            <Field Name="Этап" Identity="ID" />
+         </Fields>
+         <ReturnedFields>
+            <Field Name="Статус" InnerFields="Название" />
+            <Field Name="Этап" InnerFields="Название" />
+            <Field Name="Дата регистрации" />
+         </ReturnedFields>
+      </List>
+
+      <List WebUrl="/dms/authorities" Name="Authorities">
+         <Fields>
+            <Field Name="ID" />
+<Field Name="Дата регистрации" />
+
+            <Field Name="Регистрационный номер" />
+            <Field Name="Статус" Identity="ID" />
+            <Field Name="Этап" Identity="ID" />
+         </Fields>
+         <ReturnedFields>
+            <Field Name="Статус" InnerFields="Название" />
+            <Field Name="Этап" InnerFields="Название" />
+            <Field Name="Дата регистрации" />
+         </ReturnedFields>
+      </List>
+
+      <List WebUrl="/dms/erequests_ok" Name="erequests_ok ">
+         <Fields>
+            <Field Name="Регистрационный номер" />
+            <Field Name="ID" InnerFields="ID" />
+            &gt;
+         </Fields>
+         <ReturnedFields>
+            <Field Name="Статус" InnerFields="Название" />
+            <Field Name="Этап" InnerFields="Название" />
+            <Field Name="Дата регистрации" />
+            <Field Name="Адресат" InnerFields="Адрес электронной почты" />
+            <Field Name="Структурное подразделение сотрудника" InnerFields="Название" />
+            <Field Name="Должность (список)" InnerFields="Должность" />
+         </ReturnedFields>
+      </List>
+
+      <List WebUrl="/dms/universaldocument" Name="ConfirmationOfBriefing">
+         <Fields>
+            <Field Name="Регистрационный номер" />
+            <Field Name="ID" InnerFields="ID" />
+            &gt;
+         </Fields>
+         <ReturnedFields>
+            <Field Name="Содержание"/>
+         </ReturnedFields>
+      </List>
+
+      <List WebUrl="/dms/universaldocument" Name="ScheduleVacation">
+         <Fields>
+            <Field Name="Регистрационный номер" />
+            <Field Name="ID" InnerFields="ID" />
+            &gt;
+         </Fields>
+         <ReturnedFields>
+            <Field Name="Содержание"/>
+         </ReturnedFields>
+      </List>
+
+      <List WebUrl="/dms/debt_cancellation" Name="DebtCancellation">
+         <Fields>
+            <Field Name="Регистрационный номер" />
+            <Field Name="ID" InnerFields="ID" />
+         </Fields>
+         <ReturnedFields>
+            <Field Name="Статус" InnerFields="Название" />
+            <Field Name="Этап" InnerFields="Название" />
+            <Field Name="Файлы документа" InnerFields="Файлы документа" />
+            <Field Name="Содержание"/>
+            <Field Name="Исполнитель заявки" InnerFields="Имя пользователя" />
+          <Field Name="Задолженность принципала" InnerFields="Название" />
+             <Field Name="Позиция принципала" InnerFields="Название" />
+            <Field Name="Ссылка на исходящий документ" InnerFields="Регистрационный номер;Дата регистрации" />
+            <Field Name="Ссылка на входящий документ" InnerFields="Регистрационный номер;Дата регистрации" />
+            <Field Name="Ссылка на приказ" InnerFields="Регистрационный номер;Дата регистрации" />
+            <Field Name="Срок прикрепления документов"/>
+            <Field Name="Срок ожидания ответа принципала"/>
+            <Field Name="Срок внесения сведений"/>
+            <Field Name="Отразить в ПК до"/>
+         </ReturnedFields>
+      </List>
+
+      <List WebUrl="/dms/universaldocument" Name="AuthorityProfile">
+         <Fields>
+            <Field Name="Регистрационный номер" />
+            <Field Name="ID" InnerFields="ID" />
+         </Fields>
+         <ReturnedFields>
+            <Field Name="Статус" InnerFields="Название" />
+            <Field Name="Этап" InnerFields="Название" />
+            <Field Name="Компания (профиль)" InnerFields="Название" />
+            <Field Name="Номер профиля"/>
+			<Field Name="Должность"/>
+			<Field Name="Полномочия"/>
+            <Field Name="Список поверенных отобранных по заданным параметрам" InnerFields="Имя пользователя" />
+			<Field Name="Печать доверенностей на бумаге"/>
+			<Field Name="Комментарий исполнителю отправлен"/>
+         </ReturnedFields>
+      </List>
+
+   </SearchableLists>
+
+   <SearchObjectsMethodLists>
+      <List WebUrl="/dms/outgoing" Name="Outgoing" />
+      <List WebUrl="/dms/incoming" Name="incoming" />
+   </SearchObjectsMethodLists>
+
+   <AcceptSolutionLists>
+      <List WebUrl="/dms/access" Name="access" />
+      <List WebUrl="/dms/authorities" Name="Authorities" />
+      <List WebUrl="/dms/instructions" Name="Instructions" />
+      <List WebUrl="/dms/contracts" Name="Contracts" />
+      <List WebUrl="/dms/contracts" Name="Agreements" />
+      <List WebUrl="/dms/erequests" Name="ERequests" />
+      <List WebUrl="/dms/outgoing" Name="Outgoing" />
+      <List WebUrl="/dms/universaldocument" Name="AuthorityProfile" />
+      <List WebUrl="/dms/incoming" Name="Incoming" />
+   </AcceptSolutionLists>
+
+</Settings>
